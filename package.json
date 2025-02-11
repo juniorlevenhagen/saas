@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:db": "ts-node teste.ts",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
@@ -15,9 +16,11 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
+    "@types/dotenv": "^6.1.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.9.5"
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
