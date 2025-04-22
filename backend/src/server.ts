@@ -1,7 +1,7 @@
-import express from "express";
-import dotenv from "dotenv";
-import connectDB from "./db";
-import userRoutes from "./routes/userRoutes";
+import express from 'express';
+import dotenv from 'dotenv';
+import connectDB from './db';
+import userRoutes from './routes/userRoutes';
 
 dotenv.config();
 const app = express();
@@ -13,7 +13,7 @@ app.use(express.json());
 connectDB();
 
 // Usar as rotas de usuário
-app.use("/api", userRoutes);
+app.use('/api', userRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
